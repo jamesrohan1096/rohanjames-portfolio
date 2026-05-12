@@ -415,6 +415,68 @@ nav.dark  .nav-links a.active  { color: var(--paper); border-bottom-color: var(-
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s, transform 0.7s; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── MOBILE ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* NAV */
+  .site-header { padding: 1.2rem 1.2rem 0; gap: 0; flex-wrap: wrap; }
+  .logo { font-size: 1.1rem; margin-bottom: 0.6rem; width: 100%; }
+  .nav-tabs { gap: 1.5rem; }
+  .nav-tab { font-size: 0.55rem; letter-spacing: 0.18em; }
+
+  /* HERO — stack photo on top of text */
+  .hero-split { grid-template-columns: 1fr; height: auto; }
+  .hero-photo-col { height: auto; padding: 3rem 1.5rem 2rem; }
+  .hero-arch-wrap { width: 200px; }
+  .hero-arch { width: 200px; height: 250px; border-radius: 100px 100px 20px 20px; }
+  .hero-text-col { padding: 2rem 1.5rem 3rem; }
+  .hero-name { font-size: clamp(2.8rem, 12vw, 4rem); margin-bottom: 1rem; }
+  .hero-desc { font-size: 0.88rem; }
+
+  /* ABOUT BODY */
+  .about-content { padding: 0 1.5rem; }
+  .section-divider { margin: 3rem 0 2.5rem; }
+
+  /* WHO I AM — stack quote above body text */
+  .two-col { grid-template-columns: 1fr; gap: 2rem; }
+  .big-quote { font-size: clamp(1.4rem, 5vw, 1.8rem); }
+  .body-text { font-size: 0.88rem; }
+
+  /* EXPERIENCE — stack meta above content */
+  .exp-block { grid-template-columns: 1fr; gap: 0.8rem; padding: 2rem 0; }
+  .exp-meta { font-size: 0.58rem; }
+  .exp-company { font-size: 1.6rem; }
+  .exp-list li { font-size: 0.85rem; }
+
+  /* SKILLS — 2 columns on mobile, then 1 on very small */
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .skill-cell { padding: 1.2rem; }
+  .skill-items { font-size: 0.78rem; }
+
+  /* FOOTER */
+  .about-footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; align-items: center; }
+  .about-footer .footer-left, .about-footer .footer-right { text-align: center; }
+  .dark-footer { flex-direction: column; gap: 1rem; padding: 2rem 1.5rem; align-items: center; }
+  .dark-footer .footer-left, .dark-footer .footer-right { text-align: center; }
+
+  /* MUSIC */
+  .player-wrap { padding: 2.5rem 1.5rem; }
+  .music-hero { padding: 3rem 1.5rem 2rem; }
+  .now-playing { flex-direction: column; gap: 1.2rem; }
+  .np-cover { width: 80px; height: 80px; }
+  .track-list { padding: 0 1.5rem 3rem; }
+
+  /* PHOTOGRAPHY */
+  .photo-hero { padding: 3rem 1.5rem 2rem; }
+  .photo-grid { columns: 2; padding: 1rem 1rem; column-gap: 4px; }
+  .photo-item { margin-bottom: 4px; }
+}
+
+@media (max-width: 420px) {
+  .skills-grid { grid-template-columns: 1fr; }
+  .hero-name { font-size: clamp(2.4rem, 13vw, 3.2rem); }
+}
 </style>
 </head>
 <body>
